@@ -1,0 +1,249 @@
+.attribution { font-size: 11px; text-align: center; margin-top: 30px;}
+.attribution a { color: hsl(228, 45%, 44%); }
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    display: grid;
+    place-content: center;
+}
+
+/* =========== TYPO ===========*/
+
+.notifications-count h1 {
+    font-weight: 800;
+    font-size: 1.25rem;
+    line-height: 25px;
+    color: #11111D;
+}
+
+.notifications-count p, .info p .name {
+    font-size: 1rem;
+    line-height: 20px;
+}
+
+.info p .action, .info p .object, .time, .message-holder p {
+    font-weight: 500;
+    font-size: 0.9375rem;
+    line-height: 18px;
+}
+
+.notifications-count p {
+    font-weight: 500;
+    letter-spacing: -0.05em;
+    color: #66676B;
+}
+
+.num p {
+    font-weight: 800;
+    font-size: 1.0625rem;
+    line-height: 21px;
+    color: #F0FFFF;
+}
+
+.info p .name {
+    font-weight: 800;
+    letter-spacing: -0.06em;
+    color: #12151C;
+}
+
+.info p .action {
+    letter-spacing: -0.03em;
+
+    color: #848891;
+}
+
+.infp p .object {
+    letter-spacing: -0.02em;
+    color: #515862;
+}
+
+.club {
+    letter-spacing: -0.03em;
+    color: #09254C;
+}
+
+.time {
+    letter-spacing: -0.02em;
+    color: #B9BDC9;
+}
+
+.message-holder p {
+    letter-spacing: -0.03em;
+    color: #57575F;
+}
+
+/* =========== LAYOUT ===========*/
+
+.main-wrapper {
+    padding: 24px 16px;
+    background-color: #fff;
+}
+
+.header, .notifications-count {
+    display: flex;
+    align-items: center;
+}
+
+.header {
+    margin-bottom: 24px;
+    justify-content: space-between;
+}
+
+.header p:hover {
+    cursor: pointer;
+}
+
+.notifications-count {
+    gap: 10px;
+}
+
+.num {
+    display: grid;
+    place-content: center;
+    background-color: #083378;
+    border-radius: 5px;
+    color: #fff;
+    height: 25px;
+    width: 32px;
+}
+
+.notifications-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.notification {
+    display: flex;
+    gap: 14px;
+    padding: 15px;
+    transition: all 0.5s ease-in-out;
+}
+
+.unreaden {
+    background-color: #F6FAFD;
+    border-radius: 5px;
+}
+
+.notification img {
+    height: 40px;
+}
+
+.time {
+    margin-top: 3px;
+}
+
+.action, .object, .red-icon{
+    margin-left: 4px;
+}
+
+.red-icon {
+    height: 10px;
+    width: 10px;
+    background-color: #FF564F;
+    border-radius: 100px;
+}
+
+.notification .red-icon {
+    display: none;
+}
+
+.notification.unreaden .red-icon {
+    display: inline-block;
+}
+
+.message-holder {
+    padding: 18px 15px;
+    border: 1px solid #E3E7E6;
+    border-radius: 5px;
+    margin-top: 12px;
+    transition: all 0.2s ease-in-out;
+}
+
+/* =========== DESKTOP QUERIES ===========*/
+
+@media screen and (min-width: 980px) {
+
+    /* =========== TYPO ===========*/
+
+    .notifications-count h1 {
+        font-weight: 800;
+        font-size: 1.5rem;
+        line-height: 30px;
+        color: #11111D;
+    }
+
+    .info p .action, .info p .object, .time, .message-holder p {
+        font-weight: 500;
+        font-size: 1rem;
+        line-height: 18px;
+    }
+
+    .notifications-count p {
+        letter-spacing: unset;
+    }
+
+    .info p .name {
+        letter-spacing: 0.015em;
+    }
+
+    .info p .action {
+        letter-spacing: 0.035em;;
+    }
+
+    .infp p .object {
+        line-height: 123%;
+        letter-spacing: 0.02em;
+        color: #515862;
+    }
+
+    .club {
+        line-height: 123%;
+        letter-spacing: 0.01em;
+    }
+
+    .time {
+        font-size: 1rem;
+        line-height: 123%;
+        letter-spacing: -0.005em;
+    }
+
+    .message-holder p {
+        font-size: 1rem;
+        line-height: 129%;
+    }
+
+    /* =========== LAYOUT ===========*/
+
+    body {
+        height: 100vh;
+        background-color: #F9FAFE;
+    }
+
+    .main-wrapper {
+        padding: 36px 32px;
+        width: 733px;
+        border-radius: 15px;
+    }
+
+    .header p:hover, .info p .name:hover, .info p .object:hover {
+        color: #162D63;
+        cursor: pointer;
+    }
+
+    .message-holder:hover {
+        background-color: #E5EFF9;
+        cursor: pointer;
+    }
+
+    .num p {
+        color: #fff !important;
+    }
+
+}
